@@ -4,7 +4,7 @@ import { Button } from "./ui/button"
 import Nav from "./Nav"
 const Header = () => {
   return (
-    < header className="py-8 xl:py-12 text-primary">
+    < header className="py-8 px-6 xl:py-12 text-primary">
       <div className="container mx-auto flex justify-between items-center ">
         {/* logo */}
         <Link href='/'>

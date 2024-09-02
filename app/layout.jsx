@@ -1,7 +1,13 @@
-import { Inter } from "next/font/google";
+import { Space_Mono } from "next/font/google"; // Import a monospaced font
 import "./globals.css";
+import Header from "@/components/ui/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceMono = Space_Mono({ 
+  subsets: ["latin"],
+  weight: ['400','700',],
+  variable: "--font-spaceMono" 
+
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={spaceMono.variable}>
+        <Header/>
+        {children}
+
+      </body>
     </html>
   );
 }

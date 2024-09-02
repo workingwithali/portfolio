@@ -9,13 +9,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        hackerBg: '#000000', // Black background
-        hackerGreen: '#00ff00', // Bright green text
-        hackerDarkGreen: '#008000', // Darker green for buttons
-        hackerHoverGreen: '#006400', // Even darker green for hover
+        primary: "#00FF00", // Bright green, hacker theme primary color
+        accent: {
+          DEFAULT: "#008000", // Darker green for accents
+          hover: "#00CC00", // Slightly brighter green for hover states
+        },
+        black: "#000000", // Terminal black background
+        gray: {
+          800: "#333333", // Dark gray for project cards
+        },
       },
       fontFamily: {
-        mono: ['"Courier New"', 'Courier', 'monospace'], // Monospaced font typical of terminals
+        pramiry: "var(--font-spaceMono)",
       },
       animation: {
         'blink': 'blink 1s step-start infinite', // Adding a blink animation for cursor effect

@@ -1,6 +1,6 @@
+import Header from "@/components/Header";
 import { Space_Mono } from "next/font/google"; // Import a monospaced font
 import "./globals.css";
-import Header from "@/components/ui/Header";
 
 const spaceMono = Space_Mono({ 
   subsets: ["latin"],

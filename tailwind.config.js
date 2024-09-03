@@ -19,12 +19,6 @@ module.exports = {
           800: "#333333", // Dark gray for project cards
         },
       },
-      dropShadow: {
-        glow: [
-          "0 0px 20px rgba(255,255, 255, 0.35)",
-          "0 0px 65px rgba(255, 255,255, 0.2)"
-        ]
-      },
       fontFamily: {
         pramiry: "var(--font-spaceMono)",
       },

@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={spaceMono.variable}>
         <Header/>
+        
         <StairTransition/>
         <PageTransition>{children}</PageTransition>
         

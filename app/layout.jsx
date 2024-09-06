@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import { Space_Mono } from "next/font/google"; // Import a monospaced font
 import "./globals.css";
 import PageTransition from "@/components/PageTransition";
+import StairTransition from "@/components/StairTransition";
 
 const spaceMono = Space_Mono({ 
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={spaceMono.variable}>
         <Header/>
+        <StairTransition/>
         <PageTransition>{children}</PageTransition>
         
 

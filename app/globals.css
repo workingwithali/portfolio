@@ -7,3 +7,11 @@
     @apply font-pramiry bg-black text-primary leading-loose
   }
 }
+.pixelated-effect {
+  background: #00ff00;
+  /* Hacker-style green color */
+  box-shadow: 0 0 2px #00ff00, 0 0 5px #00ff00;
+  /* Glowing effect */
+  transform: scale(1.02);
+  /* Slight scaling for pixelation feel */
+}

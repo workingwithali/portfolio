@@ -11,7 +11,7 @@ const MatrixEffect = () => {
     canvas.height = window.innerHeight;
 
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    const fontSize = 14;
+    const fontSize = 13;
     const columns = canvas.width / fontSize;
     const drops = Array(Math.floor(columns)).fill(1);
 
@@ -34,7 +34,7 @@ const MatrixEffect = () => {
       }
     }
 
-    const interval = setInterval(draw, 20);
+    const interval = setInterval(draw, 8);
 
     return () => clearInterval(interval);
   }, []);
@@ -58,7 +58,7 @@ const MatrixTransition = ({ children }) => {
           className="fixed inset-0 h-full w-full bg-black z-50"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
+          transition={{ delay: 0.5, duration: 1.5, ease: "easeInOut" }}
           onAnimationComplete={() => setIsTransitionComplete(true)}
         >
           <MatrixEffect />

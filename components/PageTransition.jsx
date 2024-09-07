@@ -1,30 +1,66 @@
-'use client';
-import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
+"use client"; 
+
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
+
+
+const MatrixEffect = () => {
+  useEffect(() => {
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#0F0'; // Green color
+      ctx.font = `${fontSize}px monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+    }
+
+    const interval = setInterval(draw, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return <canvas id="matrix" className="matrix"></canvas>;
+};
 
 const PageTransition = ({ children }) => {
-  const pathname = usePathname();
+  const pathname = usePathname(); // Access the current route
 
   return (
-    <AnimatePresence mode="wait">
-      <div key={pathname}>
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: [0.9, 0.7, 0.3, 0], // Glitchy effect with steps
-            filter: [
-              "blur(0px) contrast(100%)",
-              "blur(2px) contrast(150%)",
-              "blur(1px) contrast(120%)",
-              "blur(0px) contrast(100%)"
-            ], // Glitchy blur effect
-            transition: { delay: 0.6, duration: 0.6, ease: "easeInOut" }
-          }}
-          className="h-screen w-screen fixed bg-black top-0 pointer-events-none"
-        />
+    <motion.div
+      key={pathname}
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.5 }}
+    >
+      <MatrixEffect />
+      <div className="page-content">
         {children}
       </div>
-    </AnimatePresence>
+    </motion.div>
   );
 };
 

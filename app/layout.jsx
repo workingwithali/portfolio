@@ -1,4 +1,5 @@
-"use client"; 
+"use client";
+
 import { AnimatePresence } from 'framer-motion';
 import Header from "@/components/Header";
 import { Space_Mono } from "next/font/google"; // Import a monospaced font
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
       <body className={spaceMono.variable}>
         <Header />
 
-        
+
         <AnimatePresence mode="wait">
           <PageTransition>
             {children}

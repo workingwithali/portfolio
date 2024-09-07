@@ -1,9 +1,9 @@
-"use client"; 
+// components/PageTransition.jsx
+"use client"; // Marks this as a client-side component
 
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-
 
 const MatrixEffect = () => {
   useEffect(() => {
@@ -52,12 +52,12 @@ const PageTransition = ({ children }) => {
     <motion.div
       key={pathname}
       initial={{ opacity: 0, y: 0 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0, }}
+      exit={{ opacity: 0, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <MatrixEffect />
-      <div className="page-content">
+      <div  className="page-content">
         {children}
       </div>
     </motion.div>

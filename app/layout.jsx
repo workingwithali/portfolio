@@ -1,10 +1,11 @@
 "use client";
 
-import { AnimatePresence } from 'framer-motion';
+// import { AnimatePresence } from 'framer-motion';
 import Header from "@/components/Header";
 import { Space_Mono } from "next/font/google"; // Import a monospaced font
 import "./globals.css";
-import PageTransition from '../components/PageTransition';
+import PageTransition from '../components/PageTransition'
+
 
 const spaceMono = Space_Mono({
   subsets: ["latin"],
@@ -25,11 +26,12 @@ export default function RootLayout({ children }) {
         <Header />
 
 
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait"> */}
+          
           <PageTransition>
             {children}
           </PageTransition>
-        </AnimatePresence>
+        {/* </AnimatePresence> */}
 
 
 

@@ -1,7 +1,4 @@
-// components/PageTransition.jsx
-"use client"; // Marks this as a client-side component
-
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
@@ -37,7 +34,7 @@ const MatrixEffect = () => {
       }
     }
 
-    const interval = setInterval(draw, 50);
+    const interval = setInterval(draw, 20);
 
     return () => clearInterval(interval);
   }, []);
@@ -45,23 +42,36 @@ const MatrixEffect = () => {
   return <canvas id="matrix" className="matrix"></canvas>;
 };
 
-const PageTransition = ({ children }) => {
-  const pathname = usePathname(); // Access the current route
+const MatrixTransition = ({ children }) => {
+  const [isTransitionComplete, setIsTransitionComplete] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Reset the transition state whenever the pathname changes
+    setIsTransitionComplete(false);
+  }, [pathname]);
 
   return (
-    <motion.div
-      key={pathname}
-      initial={{ opacity: 0, y: 0 }}
-      animate={{ opacity: 1, y: 0, }}
-      exit={{ opacity: 0, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <MatrixEffect />
-      <div  className="page-content">
-        {children}
-      </div>
-    </motion.div>
+    <>
+      {!isTransitionComplete && (
+        <motion.div
+          className="fixed inset-0 h-full w-full bg-black z-50"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
+          onAnimationComplete={() => setIsTransitionComplete(true)}
+        >
+          <MatrixEffect />
+        </motion.div>
+      )}
+
+      {isTransitionComplete && (
+        <div className="relative z-10">
+          {children}
+        </div>
+      )}
+    </>
   );
 };
 
-export default PageTransition;
+export default MatrixTransition;

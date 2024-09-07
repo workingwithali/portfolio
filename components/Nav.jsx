@@ -28,7 +28,7 @@ const links = [
 const Nav = () => {
   const pathname = usePathname(); // Move this inside the Nav component
   return (
-    <nav className="flex gap-8">
+    <nav className="flex flex-wrap gap-4 md:gap-8">
       {links.map((link, index) => (
         <Link 
           href={link.path} 

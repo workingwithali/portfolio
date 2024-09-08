@@ -4,10 +4,13 @@
 
 @layer base {
   body{
-    @apply font-pramiry bg-black text-primary leading-loose
+    @apply font-pramiry bg-black text-primary leading-loose;
+  }
+  .h1{
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold
   }
 }
-/* styles/Matrix.module.css */
+
 .matrix {
   position: fixed;
   top: 0;

@@ -16,7 +16,7 @@ const Home = () => {
                 < FiDownload />
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Socials containerStyle="flex gap-6" iconStyle="w-9 h-9 border border-accent" />
+                <Socials containerStyle="flex gap-6" iconStyle="w-9 h-9 border border-accent rounded-full flex item-center justify-center" />
                 </div>
             </div>
           </div>

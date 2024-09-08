@@ -1,3 +1,4 @@
+import Socials from "@/components/Socials"
 import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 const Home = () => {
@@ -14,7 +15,9 @@ const Home = () => {
                 <span>Download CV</span>
                 < FiDownload />
               </Button>
-              <div>social</div>
+              <div className="mb-8 xl:mb-0">
+                <Socials />
+                </div>
             </div>
           </div>
           <div>photo</div>

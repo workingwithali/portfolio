@@ -32,28 +32,28 @@ const services = [
 const Services = () => {
   return (
     <section className="min-s-[80vh] flex flex-col justify-center py-12 xl:py-0">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           intital={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
-          className="grid grid-col-1 md:grid-cols-2 gap-[60px]"
+          className="grid grid-cols-1 md:grid-cols-2 gap-[30px] md:gap-[60px]"
         >
           {services.map((service, index) => {
             return (
               <div key={index}
-                className=" flex-1 flex flex-col justify-center gap-6 group" >
+                className="flex-1 flex flex-col justify-center gap-6 group p-4 md:p-6 lg:p-8" >
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold text-outline
+                  <div className="text-3xl md:text-5xl font-extrabold text-outline
                   text-transparent group-hover:text-outline-hover transition-all duration-500">{service.num}</div>
-                  <Link href={service.href} className="w-[70px] h-[70px] rounded-full bg-primary group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
-                    <BsArrowDownRight className="text-black tex-3xl" />
+                  <Link href={service.href} className="w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full bg-primary group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45">
+                    <BsArrowDownRight className="text-black text-2xl md:text-3xl" />
                   </Link>
                 </div>
                 {/* title */}
-                <h2 className="text-[42px] font-bold leading-none text-primary
-                group-hover:text-accent transition-all duration-500">{service.title}</h2>
+                <h2 className="text-2xl md:text-[42px] font-bold leading-none text-primary
+                group-hover:text-accent-hover transition-all duration-500">{service.title}</h2>
                 {/* description */}
-                <p>{service.description}</p>
+                <p className="text-primary">{service.description}</p>
                 {/* border */}
                 <hr className="border-gray-800 w-full" />
               </div>

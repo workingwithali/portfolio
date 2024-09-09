@@ -20,10 +20,10 @@ module.exports = {
         },
       },
       fontFamily: {
-        pramiry: "var(--font-spaceMono)",
+        mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'], // Add monospaced fonts
       },
       animation: {
-        'blink': 'blink 1s step-start infinite', // Adding a blink animation for cursor effect
+        blink: 'blink 1s step-start infinite', // Adding a blink animation for cursor effect
       },
       keyframes: {
         blink: {

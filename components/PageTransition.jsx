@@ -66,9 +66,14 @@ const MatrixTransition = ({ children }) => {
       )}
 
       {isTransitionComplete && (
-        <div className="relative z-10">
+        <motion.div
+          className="relative z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        >
           {children}
-        </div>
+        </motion.div>
       )}
     </>
   );

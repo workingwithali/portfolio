@@ -19,6 +19,9 @@ module.exports = {
           800: "#333333", // Dark gray for project cards
         },
       },
+      variants: {
+        mixBlendMode: ['responsive'], // Ensure this is enabled
+      },
       fontFamily: {
         mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'], // Add monospaced fonts
       },

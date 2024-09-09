@@ -36,21 +36,24 @@ const Services = () => {
         <motion.div
           intital={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
-          className=""
+          className="grid grid-col-1 md:grid-cols-2 gap-[60px]"
         >
           {services.map((service, index) => {
             return (
-              <div key={index}>
-                <div>{service.num}</div>
-                <Link href={service.href}>
-                  <BsArrowDownRight />
-                </Link>
+              <div key={index}
+                className=" flex-1 flex flex-col justify-center gap-6 group" >
+                <div className="w-full flex justify-between items-center">
+                  <div className="text-5xl font-extrabold">{service.num}</div>
+                  <Link href={service.href}>
+                    <BsArrowDownRight />
+                  </Link>
+                </div>
                 {/* title */}
                 <h2>{service.title}</h2>
                 {/* description */}
                 <p>{service.description}</p>
                 {/* border */}
-                <hr className="border-primary w-full" />
+                <hr className="border-gray-800 w-full" />
               </div>
             )
           })}

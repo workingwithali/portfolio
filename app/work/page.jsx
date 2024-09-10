@@ -14,7 +14,8 @@ const project = [
     descrption:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
     stack:[
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }
-    ]
+    ],
+    image:"/assets/work/thumb1.png",
   },
 
 ]

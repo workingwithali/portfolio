@@ -4,12 +4,9 @@ import Image from "next/image"
 
 const Photo = () => {
     return (
-        <motion.div className="w-full h-full relative">
+        <div className="w-full h-full relative">
             {/* Photo container */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 1, duration: 0.5 } }}
-            >
+            <div>
                 {/* glitch photo */}
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
@@ -57,8 +54,8 @@ const Photo = () => {
                         }}
                     />
                 </motion.svg>
-            </motion.div>
-        </motion.div>
+            </div>
+        </div>
     );
 };
 

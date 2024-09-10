@@ -46,6 +46,7 @@ const project = [
 
 ]
 const Work = () => {
+  const [project, setProject] = useState(project[0])
   return (
     <div>
       work page

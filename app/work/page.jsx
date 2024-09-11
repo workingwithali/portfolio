@@ -1,3 +1,4 @@
+'use client'
 import { motion } from 'framer-motion'
 import React, {useState}  from 'react'
 import {Swiper, swiperSlide} from 'swiper/react'
@@ -46,11 +47,16 @@ const project = [
 
 ]
 const Work = () => {
-  const [project, setProject] = useState(project[0])
+  const [project, setProject] = useState(project[0]);
   return (
-    <div>
-      work page
-    </div>
+    <motion.div
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
+    >
+      <div className="container mx-auto">project</div>
+    </motion.div>
+
   )
 }
 

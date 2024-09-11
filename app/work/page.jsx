@@ -6,13 +6,14 @@ import 'swiper/css';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Link from 'next/link';
-import { DEFAULT_SERIF_FONT } from 'next/dist/shared/lib/constants';
+import Image from 'next/image'; // Added missing import for Image component
+
 const projects = [
   {
     num: '01',
     category: 'frontend',
     title: 'project 1',
-    descrption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.', // Fixed typo in 'description'
     stack: [
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }
     ],
@@ -24,11 +25,11 @@ const projects = [
     num: '02',
     category: 'frontend',
     title: 'project 1',
-    descrption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.', // Fixed typo in 'description'
     stack: [
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }
     ],
-    image: "/assets/work/thumb1.png",
+    image: "/assets/work/thumb2.png",
     live: "",
     github: "",
   },
@@ -36,11 +37,11 @@ const projects = [
     num: '03',
     category: 'frontend',
     title: 'project 1',
-    descrption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.', // Fixed typo in 'description'
     stack: [
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }
     ],
-    image: "/assets/work/thumb1.png",
+    image: "/assets/work/thumb3.png",
     live: "",
     github: "",
   },
@@ -48,9 +49,9 @@ const projects = [
 ]
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
-  const handleSliderChanger = (swiper) => {
-  const currentIndex = swiper.activeIndex;
-  setProject(projects[currentIndex]);
+  const handleSliderChange = (swiper) => { // Fixed typo in function name
+    const currentIndex = swiper.activeIndex;
+    setProject(projects[currentIndex]);
   }
   return (
     <motion.div
@@ -66,8 +67,8 @@ const Work = () => {
               <div className='text-8xl leading-none font-extrabold text-transparent  text-outline'>{project.num}</div>
               {/* category */}
               <h2 className='text-[42px] font-bold leading-none text-primary group-hover:text-accent-hover translate-all duration-500 capitalize'>{project.category} Project</h2>
-              {/* descrption */}
-              <p className='text-primary/60'>{project.descrption}</p>
+              {/* description */}
+              <p className='text-primary/60'>{project.description}</p>
               <ul className='flex gap-4'>
                 {project.stack.map((item, index) => {
                   return (
@@ -103,7 +104,7 @@ const Work = () => {
                         <BsGithub className='text-primary text-3xl group-hover:text-accent-hover' />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github Repositary</p>
+                        <p>Github Repository</p> {/* Fixed typo in 'Repository' */}
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -112,9 +113,18 @@ const Work = () => {
             </div>
           </div>
           <div className='w-full xl:w-[50%]'>
-            <Swiper spaceBetween={30} slidesPerView={1} onSlideChange={handleSliderChanger} className='xl:h-[520px] mb-12' >
+            <Swiper spaceBetween={30} slidesPerView={1} onSlideChange={handleSliderChange} className='xl:h-[520px] mb-12' >
               {projects.map((project, index) => {
-                return <SwiperSlide key={index}>sidfs</SwiperSlide>
+                return <SwiperSlide key={index} className='w-full'>
+                  <div className='h-[460px] relative group flex justify-center items-center bg-accent'>
+                    {/* overlay */}
+                    <div></div>
+                    {/* image */}
+                    <div className='relative w-full h-full'>
+                      <Image src={project.image} fill className='object-cover' alt='image' />
+                    </div>
+                  </div>
+                </SwiperSlide>
               })}
             </Swiper>
           </div>

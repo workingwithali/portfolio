@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
-import { Swiper, swiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -108,9 +108,10 @@ const Work = () => {
             </div>
           </div>
           <div className='w-full xl:w-[50%]'>
-            <Swiper>{projects.map((project,index)=>{
-              return <swiperSlide key={index} >silder</swiperSlide>
-            })}</Swiper>
+            <Swiper>{projects.map((project, index) => {
+              return <SwiperSlide key={index}>sidfs</SwiperSlide>
+            })}
+            </Swiper>
           </div>
         </div>
       </div>

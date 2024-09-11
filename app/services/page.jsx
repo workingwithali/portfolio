@@ -7,25 +7,25 @@ const services = [
     num: '01',
     title: 'Web Development',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
-    href: ''
+    href: '/web-development'
   },
   {
     num: '02',
-    title: 'Web Development',
+    title: 'App Development',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
-    href: ''
+    href: '/app-development'
   },
   {
     num: '03',
-    title: 'Web Development',
+    title: 'UI/UX Design',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
-    href: ''
+    href: '/ui-ux-design'
   },
   {
     num: '04',
-    title: 'Web Development',
+    title: 'SEO Optimization',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
-    href: ''
+    href: '/seo-optimization'
   },
 ];
 const textAnimation = {
@@ -34,7 +34,7 @@ const textAnimation = {
 };
 const Services = () => {
   return (
-    <motion.section className="min-s-[80vh] flex flex-col justify-center py-12 xl:py-0  " initial="hidden" animate="visible"> 
+    <motion.section className="min-s-[80vh] flex flex-col justify-center py-12 xl:py-0" initial="hidden" animate="visible"> 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={textAnimation}

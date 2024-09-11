@@ -57,7 +57,7 @@ const Work = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: {delay:2.4, duration:0.4, ease:'easeIn'} }}
+      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
       className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
     >
       <div className="container mx-auto">
@@ -83,12 +83,12 @@ const Work = () => {
               {/* border */}
               <div className='border border-primary/20'></div>
               {/* button */}
-              <div className='flex items-center gap-4'>
+              <div className='flex items-center  gap-4'>
                 {/* live project */}
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-primary/5 '>
+                      <TooltipTrigger className='flex justify-center items-center w-[70px] h-[70px] rounded-full bg-primary/5 '>
                         <BsArrowUpRight className='text-primary text-3xl group-hover:text-accent-hover' />
                       </TooltipTrigger>
                       <TooltipContent>
@@ -101,7 +101,7 @@ const Work = () => {
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-primary/5 '>
+                      <TooltipTrigger className='flex justify-center items-center w-[70px] h-[70px] rounded-full bg-primary/5 '>
                         <BsGithub className='text-primary text-3xl group-hover:text-accent-hover' />
                       </TooltipTrigger>
                       <TooltipContent>

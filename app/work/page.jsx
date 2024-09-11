@@ -48,6 +48,10 @@ const projects = [
 ]
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
+  const handleSliderChanger = (swiper) => {
+  const currentIndex = swiper.activeIndex;
+  setProject(projects[currentIndex]);
+  }
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -108,9 +112,10 @@ const Work = () => {
             </div>
           </div>
           <div className='w-full xl:w-[50%]'>
-            <Swiper>{projects.map((project, index) => {
-              return <SwiperSlide key={index}>sidfs</SwiperSlide>
-            })}
+            <Swiper spaceBetween={30} slidesPerView={1} onSlideChange={handleSliderChanger} className='xl:h-[520px] mb-12' >
+              {projects.map((project, index) => {
+                return <SwiperSlide key={index}>sidfs</SwiperSlide>
+              })}
             </Swiper>
           </div>
         </div>

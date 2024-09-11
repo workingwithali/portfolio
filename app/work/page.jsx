@@ -130,6 +130,7 @@ const Work = () => {
               <WorkSliderBtns
                 containerStyles="flex justify-between gap-2 absolute right-0 bottom-[50%] xl:bottom-0 z-20 w-full xl:w-max x1:justify-none"
                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                iconsStyles=""
               />
             </Swiper>
           </div>

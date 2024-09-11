@@ -27,15 +27,17 @@ const services = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
     href: ''
   },
-]
-
+];
+const textAnimation = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 const Services = () => {
   return (
-    <section className="min-s-[80vh] flex flex-col justify-center py-12 xl:py-0">
+    <motion.section className="min-s-[80vh] flex flex-col justify-center py-12 xl:py-0  " initial="hidden" animate="visible"> 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          intital={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
+          variants={textAnimation}
           className="grid grid-cols-1 md:grid-cols-2 gap-[30px] md:gap-[60px]"
         >
           {services.map((service, index) => {
@@ -50,18 +52,18 @@ const Services = () => {
                   </Link>
                 </div>
                 {/* title */}
-                <h2 className="text-2xl md:text-[42px] font-bold leading-none text-primary
+                <h2 className="text-2xl md:text-[42px] font-bold leading-none text-accent
                 group-hover:text-accent-hover transition-all duration-500">{service.title}</h2>
                 {/* description */}
-                <p className="text-primary">{service.description}</p>
+                <p className="text-gray-800">{service.description}</p>
                 {/* border */}
-                <hr className="border-gray-800 w-full" />
+                <hr className="border-primary w-full" />
               </div>
             )
           })}
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

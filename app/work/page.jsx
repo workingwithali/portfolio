@@ -7,6 +7,7 @@ import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Link from 'next/link';
 import Image from 'next/image'; // Added missing import for Image component
+import WorkSliderBtns from '@/components/WorkSliderBtns';
 
 const projects = [
   {
@@ -126,6 +127,8 @@ const Work = () => {
                   </div>
                 </SwiperSlide>
               })}
+
+              <WorkSliderBtns/>
             </Swiper>
           </div>
         </div>

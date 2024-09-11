@@ -77,15 +77,29 @@ const Work = () => {
               {/* border */}
               <div className='border border-primary/20'></div>
               {/* button */}
-              <div>
-                <Link href={project.github}>
-                  <TooltipProvider>
+              <div className='flex items-center justify-centere'>
+                {/* live project */}
+                <Link href={project.live}>
+                  <TooltipProvider delayDuration={100}>
                     <Tooltip>
-                      <TooltipTrigger>
-                        <BsArrowUpRight />
+                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-primary/5 '>
+                        <BsArrowUpRight className='text-primary text-3xl group-hover:text-accent-hover' />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Live Project</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+                {/* github */}
+                <Link href={project.github}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-primary/5 '>
+                        <BsGithub className='text-primary text-3xl group-hover:text-accent-hover' />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Github Repositary</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>

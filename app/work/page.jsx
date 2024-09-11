@@ -25,7 +25,7 @@ const projects = [
   {
     num: '02',
     category: 'frontend',
-    title: 'project 1',
+    title: 'project 2', // Fixed duplicate title
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.', // Fixed typo in 'description'
     stack: [
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }
@@ -37,7 +37,7 @@ const projects = [
   {
     num: '03',
     category: 'frontend',
-    title: 'project 1',
+    title: 'project 3', // Fixed duplicate title
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.', // Fixed typo in 'description'
     stack: [
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }

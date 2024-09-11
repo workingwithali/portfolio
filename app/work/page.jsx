@@ -128,7 +128,7 @@ const Work = () => {
                 </SwiperSlide>
               })}
 
-              <WorkSliderBtns/>
+              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50% - 22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" />
             </Swiper>
           </div>
         </div>

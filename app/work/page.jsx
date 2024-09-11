@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
-import React, {useState}  from 'react'
-import {Swiper, swiperSlide} from 'swiper/react'
+import React, { useState } from 'react'
+import { Swiper, swiperSlide } from 'swiper/react'
 import 'swiper/css';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -12,11 +12,11 @@ const projects = [
     num: '01',
     category: 'frontend',
     title: 'project 1',
-    descrption:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
-    stack:[
+    descrption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
+    stack: [
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }
     ],
-    image:"/assets/work/thumb1.png",
+    image: "/assets/work/thumb1.png",
     live: "",
     github: "",
   },
@@ -24,11 +24,11 @@ const projects = [
     num: '02',
     category: 'frontend',
     title: 'project 1',
-    descrption:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
-    stack:[
+    descrption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
+    stack: [
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }
     ],
-    image:"/assets/work/thumb1.png",
+    image: "/assets/work/thumb1.png",
     live: "",
     github: "",
   },
@@ -36,11 +36,11 @@ const projects = [
     num: '03',
     category: 'frontend',
     title: 'project 1',
-    descrption:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
-    stack:[
+    descrption: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
+    stack: [
       { name: 'Html' }, { name: 'Css 3' }, { name: 'javascript' }
     ],
-    image:"/assets/work/thumb1.png",
+    image: "/assets/work/thumb1.png",
     live: "",
     github: "",
   },
@@ -50,9 +50,9 @@ const Work = () => {
   const [project, setProject] = useState(projects[0]);
   return (
     <motion.div
-    initial={{opacity:0}}
-    animate={{opacity:1}}
-    className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
     >
       <div className="container mx-auto">
         <div className='flex flex-col xl:flew-row xl:gap-[30px]'>
@@ -64,9 +64,33 @@ const Work = () => {
               <h2 className='text-[42px] font-bold leading-none text-primary group-hover:text-accent-hover translate-all duration-500 capitalize'>{project.category} Project</h2>
               {/* descrption */}
               <p className='text-primary/60'>{project.descrption}</p>
-              <ul className='flex gap-4'>{project.stack.map((item, index)=>{
-                return <li key={index} className='text-xl '>{item.name}</li>
-              })}</ul>
+              <ul className='flex gap-4'>
+                {project.stack.map((item, index) => {
+                  return (
+                    <li key={index} className='text-xl text-accent'>
+                      {item.name}
+                      {index !== project.stack.length - 1 && ','}
+                    </li>
+                  );
+                })}
+              </ul>
+              {/* border */}
+              <div className='border border-primary/20'></div>
+              {/* button */}
+              <div>
+                <Link href={project.github}>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <BsArrowUpRight />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Live Project</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+              </div>
             </div>
           </div>
           <div className='w-full xl:w-[50%]'>slider</div>

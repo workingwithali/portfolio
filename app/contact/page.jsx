@@ -22,14 +22,14 @@ const info = [
     description: "03326275882",
   },
   {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "03326275882",
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "Youremail@gamil.com",
   },
   {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "03326275882",
+    icon: <FaMapMarkerAlt />,
+    title: "Adress",
+    description: "Pakistan",
   },
 ];
 

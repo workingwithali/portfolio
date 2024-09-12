@@ -49,7 +49,7 @@ const MatrixTransition = ({ children }) => {
   useEffect(() => {
     // Reset the transition state whenever the pathname changes
     setIsTransitionComplete(false);
-  }, [pathname]);
+  }, []);
 
   return (
     <>

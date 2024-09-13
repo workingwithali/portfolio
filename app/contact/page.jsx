@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
 
 import {
   Select,
@@ -14,6 +15,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -39,9 +41,15 @@ const textAnimation = {
 
 const Contact = () => {
   return (
-    <div>
-      contact
-    </div>
+    <motion.section className="h-full" initial="hidden" animate="visible">
+
+      <motion.div
+        variants={textAnimation}
+      >
+        contact
+      </motion.div>
+      
+    </motion.section>
   )
 }
 

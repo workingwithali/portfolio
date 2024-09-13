@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { motion } from "framer-motion";
 
 import {
   Select,
@@ -41,12 +40,20 @@ const textAnimation = {
 
 const Contact = () => {
   return (
-    <motion.section className="h-full" initial="hidden" animate="visible">
+    <motion.section className="py-6" initial="hidden" animate="visible">
 
       <motion.div
         variants={textAnimation}
+        className="container mx-auto "
       >
-        contact
+        <div className="flex flex-col xl:flex-row gap-[30px] ">
+          {/* form */}
+          <div>
+            <form>form</form>
+          </div>
+          {/* info */}
+          <div>info</div>
+        </div>
       </motion.div>
       
     </motion.section>

@@ -58,6 +58,8 @@ const Contact = () => {
                 <Input type="email" placeholder="Email Address" />
                 <Input type="phone" placeholder="Phone Number" />
               </div>
+              {/* select */}
+              <select name="" id=""></select>
               
             </form>
           </div>

@@ -1,20 +1,20 @@
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const Input = React.forwardRef(({ className, type, ...props }, ref) => {
   return (
     <input
       type={type}
       className={cn(
-        "flex h-10 w-full rounded-md border border-accent bg-black px-3 py-2 text-sm ring-offset-black file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-gray-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-accent dark:bg-black dark:ring-offset-black dark:placeholder:text-gray-800 dark:focus-visible:ring-hover",
+        "flex h-[48px] w-full rounded-md border border-accent bg-black px-4 py-5 text-green-400 font-mono focus:border-accent font-light placeholder:text-green-600  outline-none",
         className
       )}
       ref={ref}
       {...props}
     />
   );
-})
-Input.displayName = "Input"
+});
+Input.displayName = "Input";
 
-export { Input }
+export { Input };

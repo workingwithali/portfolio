@@ -59,7 +59,11 @@ const Contact = () => {
                 <Input type="phone" placeholder="Phone Number" />
               </div>
               {/* select */}
-              <select name="" id=""></select>
+              <Select>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select a serivce" />
+                </SelectTrigger>
+              </Select>
               
             </form>
           </div>

@@ -62,18 +62,18 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
-          <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none '>
+          <div className='group w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none '>
             <div className='flex flex-col gap-[30px] h-[50%]'>
               {/* outline */}
-              <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>{project.num}</div>
+              <div className='text-8xl leading-none font-extrabold text-transparent text-outline group-hover:text-outline-hover transition-all duration-50'>{project.num}</div>
               {/* category */}
-              <h2 className='text-[42px] font-bold leading-none text-accent hover:text-accent-hover transition-all duration-500 capitalize'>{project.category} Project</h2>
+              <h2 className='text-[42px] font-bold leading-none text-accent group-hover:text-accent-hover transition-all duration-500 capitalize'>{project.category} Project</h2>
               {/* description */}
               <p className='text-gray-800'>{project.description}</p>
               <ul className='flex gap-4'>
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className='text-xl text-accent'>
+                    <li key={index} className='text-xl text-green-800'>
                       {item.name}
                       {index !== project.stack.length - 1 && ','}
                     </li>

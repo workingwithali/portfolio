@@ -47,8 +47,8 @@ const Contact = () => {
           {/* form */}
           <div className=" xl:h-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-gray-800 rounded-xl">
-              <h3 className="text-4xl font-semibold text-accent">Let's Work Together</h3>
-              <p className="text-primary">
+              <h3 className="text-4xl font-semibold text-primary">Let's Work Together</h3>
+              <p className="text-green-400">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta necessitatibus architecto voluptatem?
               </p>
               {/* input */}
@@ -74,19 +74,22 @@ const Contact = () => {
                 </SelectContent>
               </Select>
               <Textarea className="h-[150px]" placeholder="Type you message here." />
-              <Button size="md" className="max-w-40">Send Message</Button>
+              <Button variant="outline" size="md"  className="max-w-40 items-center">Send Message</Button>
               
             </form>
           </div>
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-center order-1 xl:order-none mb-8 xl:mb-0">
-            <div className="text-primary space-y-6">
+            <div className="text-accent space-y-6">
               {info.map((item, index) => (
                 <div key={index} className="flex items-center space-x-4">
+                  <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] text-accent bg-gray-800
+                   rounded-md flex items-center justify-center ">
                   <div className="text-xl">{item.icon}</div>
+                  </div>
                   <div>
-                    <h4 className="text-accent">{item.title}</h4>
-                    <p className="text-gray-800">{item.description}</p>
+                    <h4 className="text-primary text-sm">{item.title}</h4>
+                    <p className="text-gray-800 text-xl">{item.description}</p>
                   </div>
                 </div>
               ))}

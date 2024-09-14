@@ -74,6 +74,7 @@ const Contact = () => {
                 </SelectContent>
               </Select>
               <Textarea className="h-[150px]" placeholder="Type you message here." />
+              <Button size="md" className="max-w-40">Send Message</Button>
               
             </form>
           </div>

@@ -53,15 +53,12 @@ const Contact = () => {
               </p>
               {/* input */}
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                <Input type="text" placeholder="First Name" className="bg-black text-primary border-accent focus:border-hover" />
-                <Input type="text" placeholder="Last Name" className="bg-black text-primary border-accent focus:border-hover" />
-                <Input type="email" placeholder="Email Address" className="bg-black text-primary border-accent focus:border-hover" />
-                <Input type="phone" placeholder="Phone Number" className="bg-black text-primary border-accent focus:border-hover" />
+                <Input type="text" placeholder="First Name" />
+                <Input type="text" placeholder="Last Name" />
+                <Input type="email" placeholder="Email Address" />
+                <Input type="phone" placeholder="Phone Number" />
               </div>
-              <Textarea placeholder="Your Message" className="bg-black text-primary border-accent focus:border-hover" />
-              <Button variant="outline" className="uppercase bg-accent text-black hover:bg-hover">
-                Send Message
-              </Button>
+              
             </form>
           </div>
           {/* info */}

@@ -24,7 +24,7 @@ const Home = () => {
             <span className="text-green-400">Software Engineer</span>
             <h1 className="h1">
               Hello I'm <br />
-              <span className="text-accent neon-glow">Ali Rashid</span>
+              <span className="text-accent">Ali Rashid</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-gray-800">
               I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.

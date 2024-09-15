@@ -10,12 +10,12 @@ const Photo = () => {
                 {/* glitch photo */}
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1, transition: { delay: 1.5, duration: 0.5 } }}
+                    animate={{ scale: 1, opacity: 1, transition: { delay: 0.75, duration: 0.25 } }}
                     className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
                 >
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, transition: { delay: 2, duration: 1 } }}
+                        animate={{ opacity: 1, transition: { delay: 1, duration: 0.5 } }}
                     >
                         <Image
                             src="/assets/photo.png"

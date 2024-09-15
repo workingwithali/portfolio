@@ -26,41 +26,5 @@
 
   .text-outline-hover {
     -webkit-text-stroke: 1px #008000;
-  }
-
-  .matrix {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-  }
-
-  .page-transition-enter {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-
-  .page-transition-enter-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 500ms, transform 500ms;
-  }
-
-  .page-transition-exit {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .page-transition-exit-active {
-    opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 500ms, transform 500ms;
-  }
-
-  .page-content {
-    position: relative;
-    z-index: 1;
-  }
+  }  
 }

@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from 'next/link';
-import "./not-found.css"; // External CSS for CRT effect
+import "./not-found.css";
 
 const NotFound = () => {
     return (

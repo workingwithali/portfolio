@@ -9,9 +9,9 @@ const NotFound = () => {
             opacity: 1,
             scale: [1, 1.05, 1],
             textShadow: [
-                "2px 2px 0 lime, -2px -2px 0 darkgreen",
-                "-2px -2px 0 lime, 2px 2px 0 darkgreen",
-                "2px 2px 0 lime, -2px -2px 0 darkgreen",
+                "2px 2px 0 #00FF00, -2px -2px 0 #008000", // Hacker green glow
+                "-2px -2px 0 #00FF00, 2px 2px 0 #008000",
+                "2px 2px 0 #00FF00, -2px -2px 0 #008000",
             ],
             transition: {
                 duration: 1.5,
@@ -25,7 +25,7 @@ const NotFound = () => {
     return (
         <div className="h-screen bg-black flex flex-col justify-center items-center text-primary">
             <motion.div
-                className="text-9xl font-extrabold"
+                className="text-9xl font-extrabold text-primary neon-glow"
                 variants={glitchVariants}
                 initial="initial"
                 animate="animate"
@@ -33,7 +33,7 @@ const NotFound = () => {
                 404
             </motion.div>
             <motion.p
-                className="text-lg mt-2"
+                className="text-lg mt-2 text-primary"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
@@ -41,7 +41,7 @@ const NotFound = () => {
                 Page Not Found
             </motion.p>
             <motion.p
-                className="text-sm mt-4"
+                className="text-sm mt-4 text-accent"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 1 }}

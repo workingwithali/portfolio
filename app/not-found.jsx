@@ -5,6 +5,10 @@ import Link from 'next/link';
 import "./not-found.css";
 
 const NotFound = () => {
+    const goBack = () => {
+        window.history.back();
+    };
+
     return (
         <div className="h-screen bg-black flex flex-col justify-center items-center text-green-400 crt">
             <motion.h1
@@ -30,7 +34,7 @@ const NotFound = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5, duration: 1.5 }}
                 >
-                    &gt; PLEASE TRY TO <Link href="#" className="text-white">[GO BACK]</Link> OR <Link href="#" className="text-white">[RETURN TO THE HOMEPAGE]</Link>.<br />
+                    &gt; PLEASE TRY TO <span onClick={goBack} className="text-white cursor-pointer">[GO BACK]</span> OR <Link href="/" className="text-white">[RETURN TO THE HOMEPAGE]</Link>.<br />
                     &gt; GOOD LUCK.
                 </motion.p>
             </div>

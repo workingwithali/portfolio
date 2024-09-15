@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -22,7 +23,7 @@ const NotFound = () => {
     };
 
     return (
-        <div className="h-screen bg-black flex flex-col justify-center items-center text-green-400">
+        <div className="h-screen bg-black flex flex-col justify-center items-center text-primary">
             <motion.div
                 className="text-9xl font-extrabold"
                 variants={glitchVariants}

@@ -56,6 +56,10 @@ const buttonVariants = {
     }
   }
 };
+const textAnimation = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
@@ -66,9 +70,9 @@ const Work = () => {
   };
 
   return (
+    <motion.section initial="hidden" animate="visible"> 
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: 'easeIn' } }}
+      variants={textAnimation}
       className='min-h-[80vh] flex flex-col justify-center py-12 xl:px-0'
     >
       <div className="container mx-auto">
@@ -161,6 +165,7 @@ const Work = () => {
         </div>
       </div>
     </motion.div>
+    </motion.section>
   );
 }
 

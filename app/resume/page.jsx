@@ -154,8 +154,17 @@ const textAnimation = {
 const Resume = () => {
   return (
     <motion.section initial="hidden" animate="visible">
-      <motion.div variants={textAnimation}>
-        alkkdfaj
+    <motion.div variants={textAnimation} className="mix-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+        <div className="container mx-auto">
+          <Tabs>
+            <TabsList>
+              <TabsTrigger>Exprience</TabsTrigger>
+              <TabsTrigger>Education</TabsTrigger>
+              <TabsTrigger>Skills</TabsTrigger>
+              <TabsTrigger>About me</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
       </motion.div>
     </motion.section>
   )

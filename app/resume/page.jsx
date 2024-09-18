@@ -156,13 +156,14 @@ const Resume = () => {
     <motion.section initial="hidden" animate="visible">
     <motion.div variants={textAnimation} className="mix-h-[80vh] flex items-center justify-center py-12 xl:py-0">
         <div className="container mx-auto">
-          <Tabs>
-            <TabsList>
-              <TabsTrigger>Exprience</TabsTrigger>
+          <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px] ">
+            <TabsList className="flex flex-col ">
+              <TabsTrigger>Experience</TabsTrigger>
               <TabsTrigger>Education</TabsTrigger>
               <TabsTrigger>Skills</TabsTrigger>
               <TabsTrigger>About me</TabsTrigger>
             </TabsList>
+            <div>content</div>
           </Tabs>
         </div>
       </motion.div>

@@ -160,7 +160,7 @@ const Resume = () => {
               <TabsTrigger value="about">About me</TabsTrigger>
             </TabsList>
             {/* content */}
-            <div className="max-h-[70vh] w-full overflow-auto">
+            <div className="max-h-[70vh] w-full ">
               {/* experience */}
               <TabsContent value="experience" className='w-full'>
                 <div className="flex flex-col gap-[30px] text-center xl:text-left" >
@@ -220,8 +220,31 @@ const Resume = () => {
                 </div>
               </TabsContent>
               {/* skill */}
-              <TabsContent value="skill" className='w-full'>
-                skill
+              <TabsContent value="skill" className="w-full h-full">
+                <div className="flex flex-col gap-38px">
+                  <div className="flex flex-col gap-38px text-center xl:text-left">
+                    <h3 className="text-4xl font-bold">{skill.title}</h3>
+                    <p className="max-w-[608px] text-gray-500 mx-auto xl:mx-0">
+                      {skill.description}
+                    </p>
+                  </div>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]" >
+                    {skill.skillList.map((skill, index) => {
+                      return <li key={index}>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger>
+                              <div className="text-6xl text-primary hover:text-accent transition-all duration-300" >{skill.icon}</div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>;
+                    })}
+                  </ul>
+                </div>
               </TabsContent>
               {/* about */}
               <TabsContent value="about" className='w-full'>

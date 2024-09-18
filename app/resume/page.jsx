@@ -3,7 +3,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { motion } from "framer-motion"
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, } from "react-icons/fa"
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa"
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si"
 
 // about
@@ -48,38 +48,38 @@ const about = {
 // experience
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "My exprience",
+  title: "My experience",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
   items: [
     {
       company: "ffgf",
-      postion: "frontend",
+      position: "frontend",
       duration: "2024"
     },
     {
       company: "ffgf",
-      postion: "frontend",
+      position: "frontend",
       duration: "2024"
     },
     {
       company: "ffgf",
-      postion: "frontend",
+      position: "frontend",
       duration: "2024"
     },
     {
       company: "ffgf",
-      postion: "frontend",
+      position: "frontend",
       duration: "2024"
     },
     {
       company: "ffgf",
-      postion: "frontend",
+      position: "frontend",
       duration: "2024"
     },
   ]
 }
-// educatino
-const educatino = {
+// education
+const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
@@ -129,7 +129,7 @@ const skill = {
     },
     {
       icon: <SiNextdotjs />,
-      name: 'Nextjs.js'
+      name: 'Next.js'
     },
     {
       icon: <SiTailwindcss />,
@@ -154,16 +154,22 @@ const textAnimation = {
 const Resume = () => {
   return (
     <motion.section initial="hidden" animate="visible">
-    <motion.div variants={textAnimation} className="mix-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+      <motion.div variants={textAnimation} className="mix-h-[80vh] flex items-center justify-center py-12 xl:py-0">
         <div className="container mx-auto">
           <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px] ">
-            <TabsList className="flex flex-col ">
-              <TabsTrigger>Experience</TabsTrigger>
-              <TabsTrigger>Education</TabsTrigger>
-              <TabsTrigger>Skills</TabsTrigger>
-              <TabsTrigger>About me</TabsTrigger>
-            </TabsList>
-            <div>content</div>
+            <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
+              <TabsTrigger value="experience">Experience</TabsTrigger>
+              <TabsTrigger value="education">Education</TabsTrigger>
+              <TabsTrigger value="skill">Skills</TabsTrigger>
+              <TabsTrigger value="about">About me</TabsTrigger>
+            </TabsList >
+              {/* content */}
+            <div className="max-h-[70vh] w-full">
+              {/* experience */}
+              <TooltipContent value="value" className='w-full'>
+                experience
+              </TooltipContent>
+            </div>
           </Tabs>
         </div>
       </motion.div>

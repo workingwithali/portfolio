@@ -52,27 +52,22 @@ const experience = {
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
   items: [
     {
-      company: "ffgf",
+      company: "tech solution",
       position: "frontend",
+      duration: "2023"
+    },
+    {
+      company: "Ziza science Academy",
+      position: "ux/ui",
       duration: "2024"
     },
     {
-      company: "ffgf",
-      position: "frontend",
-      duration: "2024"
+      company: "Uaf",
+      position: "Full stack",
+      duration: "2024-present"
     },
     {
-      company: "ffgf",
-      position: "frontend",
-      duration: "2024"
-    },
-    {
-      company: "ffgf",
-      position: "frontend",
-      duration: "2024"
-    },
-    {
-      company: "ffgf",
+      company: "webx",
       position: "frontend",
       duration: "2024"
     },
@@ -168,21 +163,26 @@ const Resume = () => {
               {/* experience */}
               <TabsContent value="experience" className='w-full'>
                 <div className="flex flex-col gap-[30px] text-center xl:text-left" >
-                <h3 className="text-4xl font-bold" >{experience.title}</h3>
-                <p className="max-w-[600px] text-gray-500 mx-auto xl:mx-0" >{experience.description}</p>
-                <ScrollArea className="h-[400px]" >
-                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-[30px]" >
-                    {experience.items.map((item, index)=>{
-                      return <li key={index} >
-                        <span>{item.duration}</span>
-                        <h3>{item.position}</h3>
-                        {/* dot */}
-                        <span></span>
-                        <p>{item.company}</p>
-                      </li>
-                    })}
-                  </ul>
-                </ScrollArea>
+                  <h3 className="text-4xl font-bold" >{experience.title}</h3>
+                  <p className="max-w-[600px] text-gray-500 mx-auto xl:mx-0" >{experience.description}</p>
+                  <ScrollArea className="h-[400px]" >
+                    <ul className="grid grid-cols-1 xl:grid-cols-2 gap-[30px]" >
+                      {experience.items.map((item, index) => {
+                        return (
+                          <li
+                            key={index}
+                            className="bg-gray-800 h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
+                          >
+                            <span className="text-accent" >{item.duration}</span>
+                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left" >{item.position}</h3>
+                            {/* dot */}
+                            <span></span>
+                            <p>{item.company}</p>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </ScrollArea>
                 </div>
               </TabsContent>
               {/* education */}

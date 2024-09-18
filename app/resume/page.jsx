@@ -154,21 +154,36 @@ const textAnimation = {
 const Resume = () => {
   return (
     <motion.section initial="hidden" animate="visible">
-      <motion.div variants={textAnimation} className="mix-h-[80vh] flex items-center justify-center py-12 xl:py-0">
-        <div className="container mx-auto">
-          <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px] ">
-            <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
+      <motion.div variants={textAnimation} className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
+            <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
               <TabsTrigger value="experience">Experience</TabsTrigger>
               <TabsTrigger value="education">Education</TabsTrigger>
               <TabsTrigger value="skill">Skills</TabsTrigger>
               <TabsTrigger value="about">About me</TabsTrigger>
-            </TabsList >
-              {/* content */}
-            <div className="max-h-[70vh] w-full">
+            </TabsList>
+            {/* content */}
+            <div className="max-h-[70vh] w-full overflow-auto">
               {/* experience */}
-              <TooltipContent value="value" className='w-full'>
-                experience
-              </TooltipContent>
+              <TabsContent value="experience" className='w-full'>
+                <div>
+                <h3>{experience.title}</h3>
+                <p>{experience.description}</p>
+                </div>
+              </TabsContent>
+              {/* education */}
+              <TabsContent value="education" className='w-full'>
+                education
+              </TabsContent>
+              {/* skill */}
+              <TabsContent value="skill" className='w-full'>
+                skill
+              </TabsContent>
+              {/* about */}
+              <TabsContent value="about" className='w-full'>
+                about
+              </TabsContent>
             </div>
           </Tabs>
         </div>

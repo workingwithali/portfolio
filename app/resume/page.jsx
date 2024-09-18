@@ -2,6 +2,7 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs, } from "react-icons/fa"
 import { SiTailwindcss, SiNodedotjs } from "react-icons/si"
 
+// about
 const about = {
   title: "about me",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
@@ -40,6 +41,7 @@ const about = {
     },
   ]
 }
+// experience
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My exprience",
@@ -68,6 +70,34 @@ const experience = {
     {
       company: "ffgf",
       postion: "frontend",
+      duration:"2024"
+    },
+  ]
+}
+// educatino
+const educatino = {
+  icon: "/assets/resume/cap.svg",
+  title: "My education",
+  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
+  items:[
+    {
+      institution: "apnacollage",
+      degree: "frontend course",
+      duration:"2024"
+    },
+    {
+      institution: "apnacollage",
+      degree: "DSA",
+      duration:"2024"
+    },
+    {
+      institution: "UAF",
+      degree: "Software Engineering",
+      duration:"2023-2027"
+    },
+    {
+      institution: "apnacollage",
+      degree: "frontend course",
       duration:"2024"
     },
   ]

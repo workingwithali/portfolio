@@ -6,6 +6,16 @@
   body {
     @apply font-mono bg-black text-primary leading-loose;
   }
+    html,
+    body,
+    #__next {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      /* Hide the default scrollbars */
+    }
 
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;

@@ -2,6 +2,7 @@
 
 import { AnimatePresence } from 'framer-motion';
 import Header from "@/components/Header";
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { Space_Mono } from "next/font/google"; // Import a monospaced font
 import "./globals.css";
 import PageTransition from '../components/PageTransition'
@@ -22,12 +23,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={spaceMono.variable}>
+      <ScrollArea className="h-screen w-screen">
         <Header />
         <AnimatePresence mode="wait">
           <PageTransition>
             {children}
           </PageTransition>
         </AnimatePresence>
+      </ScrollArea>
       </body>
     </html>
   );

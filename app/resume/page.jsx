@@ -58,6 +58,16 @@ const experience = {
       duration: "2023"
     },
     {
+      company: "tech solution",
+      position: "frontend",
+      duration: "2023"
+    },
+    {
+      company: "tech solution",
+      position: "frontend",
+      duration: "2023"
+    },
+    {
       company: "Ziza science Academy",
       position: "ux/ui",
       duration: "2024"
@@ -164,8 +174,8 @@ const Resume = () => {
               {/* experience */}
               <TabsContent value="experience" className='w-full'>
                 <div className="flex flex-col gap-[30px] text-center xl:text-left" >
-                  <h3 className="text-4xl font-bold" >{experience.title}</h3>
-                  <p className="max-w-[600px] text-gray-500 mx-auto xl:mx-0" >{experience.description}</p>
+                  <h3 className="text-4xl font-bold capitalize " >{experience.title}</h3>
+                  <p className="max-w-[600px] text-gray-800 mx-auto xl:mx-0" >{experience.description}</p>
                   <ScrollArea className="h-[400px] overflow-y-auto">
                     <ul className="grid grid-cols-1 xl:grid-cols-2 gap-[30px]">
                       {experience.items.map((item, index) => {
@@ -175,7 +185,7 @@ const Resume = () => {
                             className="bg-gray-800 h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
-                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+                            <h3 className="text-2xl font-semibold capitalize max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                             <div className="flex items-center gap-3">
                               {/* dot */}
                               <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
@@ -194,7 +204,7 @@ const Resume = () => {
               <TabsContent value="education" className='w-full'>
                 <div className="flex flex-col gap-[30px] text-center xl:text-left" >
                   <h3 className="text-4xl font-bold" >{education.title}</h3>
-                  <p className="max-w-[600px] text-gray-500 mx-auto xl:mx-0" >{education.description}</p>
+                  <p className="max-w-[600px] text-gray-800 mx-auto xl:mx-0" >{education.description}</p>
                   <ScrollArea className="h-[400px] overflow-y-auto">
                     <ul className="grid grid-cols-1 xl:grid-cols-2 gap-[30px]">
                       {education.items.map((item, index) => {
@@ -204,7 +214,7 @@ const Resume = () => {
                             className="bg-gray-800 h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
-                            <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                            <h3 className="text-2xl font-semibold capitalize max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
                             <div className="flex items-center gap-3">
                               {/* dot */}
                               <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
@@ -221,10 +231,10 @@ const Resume = () => {
               </TabsContent>
               {/* skill */}
               <TabsContent value="skill" className="w-full h-full">
-                <div className="flex flex-col gap-38px">
-                  <div className="flex flex-col gap-38px text-center xl:text-left">
-                    <h3 className="text-4xl font-bold">{skill.title}</h3>
-                    <p className="max-w-[608px] text-gray-500 mx-auto xl:mx-0">
+                <div className="flex flex-col gap-[30px]">
+                  <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                    <h3 className="text-4xl capitalize font-bold">{skill.title}</h3>
+                    <p className="max-w-[600px] text-gray-800 mx-auto xl:mx-0">
                       {skill.description}
                     </p>
                   </div>

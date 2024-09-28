@@ -17,8 +17,8 @@ const projects = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
     stack: [{ name: 'HTML' }, { name: 'CSS 3' }, { name: 'JavaScript' }],
     image: "/assets/work/thumb1.png",
-    live: "#",  // Update with actual URL or keep empty
-    github: "#",  // Update with actual URL or keep empty
+    live: "#",  
+    github: "#",  
   },
   {
     num: '02',
@@ -27,7 +27,7 @@ const projects = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum eum a culpa quaerat illum soluta, iure reprehenderit odit eligendi non quod? Quibusdam, error esse.',
     stack: [{ name: 'HTML' }, { name: 'CSS 3' }, { name: 'JavaScript' }],
     image: "/assets/work/thumb2.png",
-    live: "#",  // Update with actual URL or keep empty
+    live: "#",  
     github: "#",  // Update with actual URL or keep empty
   },
   {
@@ -132,7 +132,7 @@ const Work = () => {
                           <BsGithub className='text-[#00FF00] text-3xl' />
                         </motion.div>
                       </TooltipTrigger>
-                      <TooltipContent className='bg-[#111] text-[#00FF00]'>
+                      <TooltipContent >
                         <p>Github Repository</p>
                       </TooltipContent>
                     </Tooltip>

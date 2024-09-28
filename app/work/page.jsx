@@ -111,7 +111,7 @@ const Work = () => {
                           <BsArrowUpRight className='text-[#00FF00] text-3xl' />
                         </motion.div>
                       </TooltipTrigger>
-                      <TooltipContent className='bg-[#111] text-[#00FF00]'>
+                      <TooltipContent >
                         <p>Live Project</p>
                       </TooltipContent>
                     </Tooltip>

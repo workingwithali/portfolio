@@ -182,7 +182,7 @@ const Resume = () => {
                         return (
                           <li
                             key={index}
-                            className="bg-gray-800 h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
+                            className="bg-[#111] h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
                             <h3 className="text-2xl font-semibold capitalize max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
@@ -211,14 +211,14 @@ const Resume = () => {
                         return (
                           <li
                             key={index}
-                            className="bg-gray-800 h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
+                            className="bg-[#111] h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
                             <h3 className="text-2xl font-semibold capitalize max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
                             <div className="flex items-center gap-3">
                               {/* dot */}
                               <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                              <p className="text-white/50">{item.institution}</p>
+                              <p className="text-accent">{item.institution}</p>
                             </div>
                           </li>
                         );
@@ -243,8 +243,8 @@ const Resume = () => {
                       return <li key={index}>
                         <TooltipProvider delayDuration={100} >
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] flex justify-center items-center bg-gray-800  rounded-xl group" >
-                              <div className="text-6xl text-primary hover:text-accent transition-all duration-300" >{skill.icon}</div>
+                            <TooltipTrigger className="group w-full h-[150px] flex justify-center items-center bg-[#111]  rounded-xl group" >
+                              <div className="text-6xl text-primary group-hover:text-accent transition-all duration-300" >{skill.icon}</div>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize " >{skill.name}</p>

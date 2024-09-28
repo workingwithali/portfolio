@@ -51,7 +51,7 @@ const Contact = () => {
                 Let's Work Together
               </h3>
               <p className="text-accent text-sm sm:text-base md:text-lg">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta necessitatibus architecto voluptatem?
+                Lorem ipsum, dolor sit amet consectetur adipisicing 
               </p>
               {/* input */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -76,7 +76,7 @@ const Contact = () => {
                 </SelectContent>
               </Select>
               <Textarea className="h-[120px] sm:h-[150px] md:h-[180px]" placeholder="Type your message here." />
-              <Button variant="outline" size="sm" className="max-w-40  items-center">
+              <Button size="sm" className="max-w-40 outline outline-1 outline-primary  items-center">
                 Send Message
               </Button>
             </form>
@@ -86,7 +86,7 @@ const Contact = () => {
             <div className="text-accent space-y-4 sm:space-y-6">
               {info.map((item, index) => (
                 <div key={index} className="flex items-center space-x-4 sm:space-x-6">
-                  <div className="w-[40px] h-[40px] sm:w-[52px] sm:h-[52px] xl:w-[72px] xl:h-[72px] text-accent bg-gray-800 rounded-md flex items-center justify-center">
+                  <div className="w-[40px] h-[40px] sm:w-[52px] sm:h-[52px] xl:w-[72px] xl:h-[72px] text-accent bg-[#111] rounded-md flex items-center justify-center">
                     <div className="text-lg sm:text-xl">{item.icon}</div>
                   </div>
                   <div>

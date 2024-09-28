@@ -147,7 +147,7 @@ const Work = () => {
                 <SwiperSlide key={index} className='w-full'>
                   <div className='h-[460px] relative group flex justify-center items-center bg-accent'>
                     {/* overlay */}
-                    <div className='absolute top-0 bottom-0 w-full h-full bg-accent/20 z-10'></div>
+                    <div className='absolute top-0 bottom-0 w-full h-full bg-black/40 z-10'></div>
                     {/* image */}
                     <div className='relative w-full h-full'>
                       <Image src={project.image} layout='fill' className='object-cover' alt={`Project ${project.num} Image`} />

@@ -46,11 +46,11 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="flex-1 xl:h-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-6 sm:p-10 bg-gray-800 rounded-xl">
+            <form className="flex flex-col gap-6 p-6 sm:p-10 bg-[#111] rounded-xl">
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-primary">
                 Let's Work Together
               </h3>
-              <p className="text-green-400 text-sm sm:text-base md:text-lg">
+              <p className="text-accent text-sm sm:text-base md:text-lg">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta necessitatibus architecto voluptatem?
               </p>
               {/* input */}

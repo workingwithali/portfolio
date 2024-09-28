@@ -189,7 +189,7 @@ const Resume = () => {
                             <div className="flex items-center gap-3">
                               {/* dot */}
                               <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                              <p className="text-white/50">{item.company}</p>
+                              <p className="text-accent">{item.company}</p>
                             </div>
                           </li>
                         );

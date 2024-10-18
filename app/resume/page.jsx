@@ -6,7 +6,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { motion } from "framer-motion"
 import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa"
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si"
-
 // about
 const about = {
   title: "about me",
@@ -182,7 +181,7 @@ const Resume = () => {
                         return (
                           <li
                             key={index}
-                            className="bg-[#111] h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
+                            className="bg-[#111] h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-md flex flex-col justify-center items-center xl:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
                             <h3 className="text-2xl font-semibold capitalize max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
@@ -211,7 +210,7 @@ const Resume = () => {
                         return (
                           <li
                             key={index}
-                            className="bg-[#111] h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-xl flex flex-col justify-center items-center xl:items-start gap-1"
+                            className="bg-[#111] h-auto py-6 px-4 sm:px-6 md:px-8 lg:px-10 rounded-md flex flex-col justify-center items-center xl:items-start gap-1"
                           >
                             <span className="text-accent">{item.duration}</span>
                             <h3 className="text-2xl font-semibold capitalize max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
@@ -274,8 +273,10 @@ const Resume = () => {
             </div>
           </Tabs>
         </div>
+        
       </motion.div>
     </motion.section>
+    
   )
 }
 

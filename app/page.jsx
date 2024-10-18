@@ -5,6 +5,8 @@ import Stats from "@/components/Stats"
 import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 import { motion } from "framer-motion"
+import Experience from '../components/Experience';
+
 
 const textAnimation = {
   hidden: { opacity: 0, y: 50 },
@@ -15,7 +17,7 @@ const Home = () => {
   return (
     <motion.section className="h-full" initial="hidden" animate="visible">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-15">
           {/* text */}
           <motion.div
             variants={textAnimation}
@@ -48,6 +50,12 @@ const Home = () => {
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
+        </div>
+      </div>
+      <div className=" container min-h-screen bg-black">
+        <div className="max-w-6xl mx-auto py-5 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl lg:text-4xl text-primary mb-8">Where I've Worked</h1>
+          <Experience />
         </div>
       </div>
       <Stats />

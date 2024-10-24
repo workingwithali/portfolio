@@ -29,7 +29,7 @@ const Home = () => {
               <span className="text-accent">Ali Rashid</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-gray-800">
-              I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.
+             Mastering the art of seamless digital experiences, I combine expert programming skills with innovative problem-solving to craft secure, high-impact solutions.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <motion.div

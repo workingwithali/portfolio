@@ -48,10 +48,10 @@ const Contact = () => {
           <div className="flex-1 xl:h-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-6 sm:p-10 bg-[#111] rounded-md">
               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-primary">
-                Let's Work Together
+                Join Forces with Us
               </h3>
               <p className="text-accent text-sm sm:text-base md:text-lg">
-                Lorem ipsum, dolor sit amet consectetur adipisicing 
+                Together, we can create and secure the future.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

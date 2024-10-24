@@ -6,28 +6,29 @@ const services = [
   {
     num: '01',
     title: 'Web Development',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
+    description: 'Creating powerful and scalable web applications using NestJS, ensuring exceptional performance and maintainability.',
     href: '/web-development'
   },
   {
     num: '02',
     title: 'App Development',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
+    description: 'Delivering high-quality mobile applications with React Native, offering a seamless user experience across both iOS and Android platforms.',
     href: '/app-development'
   },
   {
     num: '03',
     title: 'UI/UX Design',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
+    description: 'Designing stunning and user-centered interfaces in Figma, focusing on aesthetics and functionality to elevate user engagement.',
     href: '/ui-ux-design'
   },
   {
     num: '04',
     title: 'SEO Optimization',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsum in voluptate illo praesentium mollitia. Ipsa iste iure autem.',
+    description: 'Boosting your online presence with strategic SEO optimization, driving organic traffic and maximizing visibility in search results.',
     href: '/seo-optimization'
   },
 ];
+
 const textAnimation = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },

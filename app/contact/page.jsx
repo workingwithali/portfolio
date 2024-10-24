@@ -18,17 +18,17 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const info = [
   {
-    icon: <FaPhoneAlt className="text-primary" />,
+    icon: <FaPhoneAlt  />,
     title: "Phone",
     description: "03326275882",
   },
   {
-    icon: <FaEnvelope className="text-primary" />,
+    icon: <FaEnvelope  />,
     title: "Email",
     description: "Youremail@gamil.com",
   },
   {
-    icon: <FaMapMarkerAlt className="text-primary" />,
+    icon: <FaMapMarkerAlt  />,
     title: "Address",
     description: "Pakistan",
   },
@@ -90,7 +90,7 @@ const Contact = () => {
                     <div className="text-lg sm:text-xl">{item.icon}</div>
                   </div>
                   <div>
-                    <h4 className="text-accent text-sm sm:text-base">{item.title}</h4>
+                    <h4 className="text-primary text-sm sm:text-base">{item.title}</h4>
                     <p className="text-gray-800 text-base sm:text-lg">{item.description}</p>
                   </div>
                 </div>

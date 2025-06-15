@@ -1,11 +1,19 @@
 "use client"
-
+import Image from 'next/image';
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { motion } from "framer-motion"
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from "react-icons/fa"
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si"
+import {
+  FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaGitAlt, FaGithub, FaFigma,
+  FaDatabase, FaJava, FaCuttlefish
+} from "react-icons/fa";
+import {
+  SiNextdotjs, SiTailwindcss, SiMongodb, SiTypescript, SiCsharp, SiCplusplus,
+  SiBootstrap, SiExpress, SiRedux, SiChatbot, SiReactrouter, SiTensorflow, SiScikitlearn
+} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+import { MdOutlineSmartToy } from "react-icons/md";
 // about
 const about = {
   title: "about me",
@@ -48,41 +56,33 @@ const about = {
 // experience
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "My experience",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
+  title: "My Experience",
+  description:
+    "I'm a Software Engineer skilled in React.js, Next.js, and Python. I've solved over 250 LeetCode problems, contributed to open-source, and participated in international AI hackathons.",
   items: [
     {
-      company: "tech solution",
-      position: "frontend",
-      duration: "2023"
+      position: "Frontend Developer",
+      company: "Freelance / Open Source",
+      duration: "2023 - Present",
     },
     {
-      company: "tech solution",
-      position: "frontend",
-      duration: "2023"
+      position: "AI Developer",
+      company: "Lablab Hackathons",
+      duration: "2023 - Present",
     },
     {
-      company: "tech solution",
-      position: "frontend",
-      duration: "2023"
+      position: "Open Source Contributor",
+      company: "GitHub",
+      duration: "Ongoing",
     },
     {
-      company: "Ziza science Academy",
-      position: "ux/ui",
-      duration: "2024"
+      position: "LeetCode Problem Solver",
+      company: "Self-Learning",
+      duration: "2022 - Present",
     },
-    {
-      company: "Uaf",
-      position: "Full stack",
-      duration: "2024-present"
-    },
-    {
-      company: "webx",
-      position: "frontend",
-      duration: "2024"
-    },
-  ]
-}
+  ],
+};
+
 // education
 const education = {
   icon: "/assets/resume/cap.svg",
@@ -113,44 +113,53 @@ const education = {
 }
 // skill
 const skill = {
-  title: "My skill",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
+  title: "My Skills",
+  description: "I’m a full-stack developer with experience in AI, ML, and chatbot development. From building responsive interfaces to backend APIs and intelligent assistants, here’s what I bring to the table:",
   skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: 'Html 5'
-    },
-    {
-      icon: <FaCss3 />,
-      name: 'Css 3'
-    },
-    {
-      icon: <FaJs />,
-      name: 'Js'
-    },
-    {
-      icon: <FaReact />,
-      name: 'React.js'
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: 'Next.js'
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: 'Tailwindcss'
-    },
-    {
-      icon: <FaNodeJs />,
-      name: 'Node.js'
-    },
-    {
-      icon: <FaFigma />,
-      name: 'Figma'
-    },
+    // Programming Languages
+    { icon: <FaJs />, name: "JavaScript (ES6+)" },
+    { icon: <SiTypescript />, name: "TypeScript" },
+    { icon: <FaPython />, name: "Python" },
+    { icon: <SiCplusplus />, name: "C++" },
+    { icon: <SiCsharp />, name: "C#" },
+    { icon: <FaJava />, name: "Java" },
 
+    // Web Development
+    { icon: <FaHtml5 />, name: "HTML5" },
+    { icon: <FaCss3 />, name: "CSS3" },
+    { icon: <SiBootstrap />, name: "Bootstrap 5" },
+    { icon: <FaReact />, name: "React.js" },
+    { icon: <SiReactrouter />, name: "React Router" },
+    { icon: <SiRedux />, name: "State Management" },
+    { icon: <SiNextdotjs />, name: "Next.js" },
+    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+
+    // Mobile Development
+    { icon: <FaReact />, name: "React Native" },
+
+    // Backend Development
+    { icon: <FaNodeJs />, name: "Node.js" },
+    { icon: <SiExpress />, name: "Express.js" },
+    { icon: <FaPython />, name: "Python (Backend)" },
+
+    // Version Control
+    { icon: <FaGitAlt />, name: "Git" },
+    { icon: <FaGithub />, name: "GitHub" },
+
+    // APIs & Databases
+    { icon: <TbApi />, name: "REST APIs" },
+    { icon: <SiMongodb />, name: "MongoDB" },
+
+    // AI/ML & Chatbots
+    { icon: <MdOutlineSmartToy />, name: "AI-Powered Chatbots" },
+    { icon: <SiTensorflow />, name: "TensorFlow" },
+    { icon: <SiScikitlearn />, name: "Scikit-Learn" },
+    { icon: <SiChatbot />, name: "Chatbot Design" },
+
+    // UI/UX
+    { icon: <FaFigma />, name: "Figma" },
   ]
-}
+};
 const textAnimation = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -163,7 +172,16 @@ const Resume = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-              <TabsTrigger value="experience">Experience</TabsTrigger>
+              <TabsTrigger value="experience" className="flex items-center gap-2">
+                <Image
+                  src={experience.icon}
+                  alt="Experience icon"
+                  width={20}
+                  height={20}
+                  className="filter invert-0 brightness-0"
+                />
+                Experience
+              </TabsTrigger>
               <TabsTrigger value="education">Education</TabsTrigger>
               <TabsTrigger value="skill">Skills</TabsTrigger>
               <TabsTrigger value="about">About me</TabsTrigger>
@@ -261,7 +279,7 @@ const Resume = () => {
                   <h3 className=" text-4xl font-bold capitalize " >{about.title}</h3>
                   <p className="max-w-[600px] text-gray-800 mx-auto xl:mx-0">{about.description}</p>
                   <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 ">
-                    {about.info.map((item ,index)=>{
+                    {about.info.map((item, index) => {
                       return <li key={index} className="flex items-center justify-center xl:justify-start gap-4" >
                         <span className="text-accent" >{item.fieldName}</span>
                         <span className="text-xl" >{item.fieldValue}</span>
@@ -273,10 +291,10 @@ const Resume = () => {
             </div>
           </Tabs>
         </div>
-        
+
       </motion.div>
     </motion.section>
-    
+
   )
 }
 

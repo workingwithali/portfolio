@@ -86,53 +86,64 @@ const experience = {
 // education
 const education = {
   icon: "/assets/resume/cap.svg",
-  title: "My education",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
+  title: "My Education",
+  description: "A journey of continuous learning in software engineering, full-stack development, and AI technologies.",
   items: [
     {
-      institution: "apnacollage",
-      degree: "frontend course",
+      institution: "University of Agriculture, Faisalabad (UAF)",
+      degree: "BS Software Engineering",
+      duration: "2023 - 2027"
+    },
+    {
+      institution: "Apna College",
+      degree: "Frontend Development Course",
       duration: "2024"
     },
     {
-      institution: "apnacollage",
-      degree: "DSA",
+      institution: "Apna College",
+      degree: "Data Structures & Algorithms (DSA)",
       duration: "2024"
     },
     {
-      institution: "UAF",
-      degree: "Software Engineering",
-      duration: "2023-2027"
-    },
-    {
-      institution: "apnacollage",
-      degree: "frontend course",
+      institution: "CodeWithHarry",
+      degree: "MERN Stack Development",
       duration: "2024"
     },
+    {
+      institution: "CodeWithHarry",
+      degree: "Next.js Full Stack Development",
+      duration: "2024"
+    },
+    {
+      institution: "Self-Learning",
+      degree: "AI/ML Journey & Roadmap (via GitHub)",
+      duration: "2024 - Present"
+    }
   ]
 }
+
 // skill
 const skill = {
   title: "My Skills",
   description: "I’m a full-stack developer with experience in AI, ML, and chatbot development. From building responsive interfaces to backend APIs and intelligent assistants, here’s what I bring to the table:",
   skillList: [
     // Programming Languages
-    { icon: <FaJs />, name: "JavaScript (ES6+)" },
-    { icon: <SiTypescript />, name: "TypeScript" },
-    { icon: <FaPython />, name: "Python" },
     { icon: <SiCplusplus />, name: "C++" },
     { icon: <SiCsharp />, name: "C#" },
     { icon: <FaJava />, name: "Java" },
+    { icon: <FaPython />, name: "Python" },
+    { icon: <FaJs />, name: "JavaScript (ES6+)" },
+    { icon: <SiTypescript />, name: "TypeScript" },
 
     // Web Development
     { icon: <FaHtml5 />, name: "HTML5" },
     { icon: <FaCss3 />, name: "CSS3" },
     { icon: <SiBootstrap />, name: "Bootstrap 5" },
+    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
     { icon: <FaReact />, name: "React.js" },
     { icon: <SiReactrouter />, name: "React Router" },
     { icon: <SiRedux />, name: "State Management" },
     { icon: <SiNextdotjs />, name: "Next.js" },
-    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
 
     // Mobile Development
     { icon: <FaReact />, name: "React Native" },

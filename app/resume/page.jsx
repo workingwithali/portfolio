@@ -184,16 +184,8 @@ const Resume = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-              <TabsTrigger value="experience" className="flex items-center gap-2">
-                <Image
-                  src={experience.icon}
-                  alt="Experience icon"
-                  width={20}
-                  height={20}
-                  className="filter invert-0 brightness-0"
-                />
-                Experience
-              </TabsTrigger>
+              
+              <TabsTrigger value="experience">Experience</TabsTrigger>
               <TabsTrigger value="education">Education</TabsTrigger>
               <TabsTrigger value="skill">Skills</TabsTrigger>
               <TabsTrigger value="about">About me</TabsTrigger>

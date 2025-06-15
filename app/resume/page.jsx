@@ -16,8 +16,9 @@ import { TbApi } from "react-icons/tb";
 import { MdOutlineSmartToy } from "react-icons/md";
 // about
 const about = {
-  title: "about me",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum commodi veritatis explicabo.",
+  title: "About Me",
+  description: "I'm Ali Rashid, a passionate Software Engineer from the University of Agriculture, Faisalabad. I specialize in Frontend Development using React.js and Next.js, and I'm deeply interested in Generative AI and Machine Learning. With hands-on experience in building AI-powered apps and participating in national hackathons, I love crafting elegant digital experiences and constantly pushing the boundaries of innovation.",
+
   info: [
     {
       fieldName: 'Name',

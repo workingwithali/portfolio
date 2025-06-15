@@ -5,28 +5,28 @@ import { motion } from "framer-motion";
 const services = [
   {
     num: '01',
-    title: 'Web Development',
-    description: 'Creating powerful and scalable web applications using NestJS, ensuring exceptional performance and maintainability.',
-    href: '/web-development'
+    title: 'Frontend Web Development',
+    description: 'Building responsive and modern web applications using React.js, Next.js, and Tailwind CSS with a focus on performance and UI/UX.',
+    href: '/frontend-development'
   },
   {
     num: '02',
-    title: 'App Development',
-    description: 'Delivering high-quality mobile applications with React Native, offering a seamless user experience across both iOS and Android platforms.',
-    href: '/app-development'
+    title: 'AI & ML Projects',
+    description: 'Creating intelligent applications using Python, Flask, and open-source LLMs, including real-time health monitoring and AI assistants.',
+    href: '/ai-ml-projects'
   },
   {
     num: '03',
-    title: 'UI/UX Design',
-    description: 'Designing stunning and user-centered interfaces in Figma, focusing on aesthetics and functionality to elevate user engagement.',
-    href: '/ui-ux-design'
+    title: 'React Native Development',
+    description: 'Developing cross-platform mobile apps with React Native, delivering seamless performance and native-like experiences.',
+    href: '/react-native-development'
   },
   {
     num: '04',
-    title: 'SEO Optimization',
-    description: 'Boosting your online presence with strategic SEO optimization, driving organic traffic and maximizing visibility in search results.',
-    href: '/seo-optimization'
-  },
+    title: 'Problem Solving & DSA',
+    description: 'Strengthening algorithmic thinking by solving LeetCode problems in JavaScript and Python, focusing on efficiency and logic.',
+    href: '/problem-solving'
+  }
 ];
 
 const textAnimation = {

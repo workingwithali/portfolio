@@ -24,20 +24,20 @@ const about = {
       fieldValue: 'Ali Rashid'
     },
     {
-      fieldName: 'Phone',
+      fieldName: 'Whatsapp',
       fieldValue: '03326275882'
     },
     {
       fieldName: 'Experience',
-      fieldValue: '12+ Year'
+      fieldValue: '2+ Year'
     },
     {
       fieldName: 'Nationality',
       fieldValue: 'Pakistani'
     },
     {
-      fieldName: 'Skype',
-      fieldValue: 'Ali Rashid'
+      fieldName: 'LinkedIn',
+      fieldValue: 'workingwithali'
     },
     {
       fieldName: 'Email',
